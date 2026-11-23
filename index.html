@@ -62,6 +62,30 @@ line-height:1.2;
   @media (prefers-reduced-motion: reduce) {
     .star { animation: none; }
   }
+.ice-cracks {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+.ice-cracks svg {
+  width: 100%;
+  height: 100%;
+}
+
+@media (max-width: 600px) {
+  .ice-cracks {
+    opacity: 0.38;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ice-cracks {
+    opacity: 0.3;
+  }
+}
 </style>
 </head>
 <body>
@@ -75,6 +99,35 @@ line-height:1.2;
   <div class="star" style="top:80%; left:60%;"></div>
 </div>
 
+<div class="ice-cracks"
+aris-hidden="true"></div>
+
+<div class="ice-cracks" aria-hidden="true">
+  <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
+    <g stroke="#ffffff" fill="none" stroke-linecap="round">
+      <path d="M180 120 L260 210 L250 330 L330 420 L320 560 L410 650"
+            stroke-width="1.2" opacity="0.35"/>
+      <path d="M260 210 L390 190 L520 250 L640 230"
+            stroke-width="0.9" opacity="0.22"/>
+      <path d="M330 420 L450 470 L560 430 L690 500"
+            stroke-width="0.8" opacity="0.18"/>
+      <path d="M410 650 L540 690 L660 640 L790 700"
+            stroke-width="0.9" opacity="0.20"/>
+      <path d="M760 90 L860 160 L960 130 L1080 210"
+            stroke-width="1.1" opacity="0.28"/>
+      <path d="M960 130 L1020 250 L940 350 L1040 430"
+            stroke-width="0.8" opacity="0.18"/>
+      <path d="M1080 210 L1160 330 L1090 470"
+            stroke-width="0.9" opacity="0.22"/>
+      <path d="M520 250 L610 340 L590 470 L700 560"
+            stroke-width="0.7" opacity="0.14"/>
+      <path d="M860 160 L800 300 L880 420"
+            stroke-width="0.7" opacity="0.15"/>
+      <path d="M250 330 L180 460 L260 570"
+            stroke-width="0.7" opacity="0.16"/>
+    </g>
+  </svg>
+</div>
 <div class="container">
 
 <h1>A Lake<br>That Breathes</h1>
