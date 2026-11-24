@@ -73,6 +73,17 @@ line-height:1.2;
 .ice-cracks svg {
   width: 100%;
   height: 100%;
+  animation: ice-drift 20s ease-in-out infinite;
+}
+
+@keyframes ice-drift {
+  0%, 100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(4px, -7px);
+  }
 }
 
 @media (max-width: 600px) {
@@ -82,6 +93,15 @@ line-height:1.2;
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .ice-cracks {
+    opacity: 0.3;
+  }
+
+  .ice-cracks svg {
+    animation: none;
+    transform: none;
+  }
+} {
   .ice-cracks {
     opacity: 0.3;
   }
@@ -99,8 +119,7 @@ line-height:1.2;
   <div class="star" style="top:80%; left:60%;"></div>
 </div>
 
-<div class="ice-cracks"
-aris-hidden="true"></div>
+
 
 <div class="ice-cracks" aria-hidden="true">
   <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice">
@@ -338,7 +357,7 @@ aris-hidden="true"></div>
 
 <p>From a cup of coffee to a universe, this is how my journey continues.</p>
 
-<p class="end">#mymyCaffe #meTimeShare #keep5Creating.</p>
+<p class="end">#mymyCaffe #meTimeShare #keep5Creating</p>
 
 </div>
 
